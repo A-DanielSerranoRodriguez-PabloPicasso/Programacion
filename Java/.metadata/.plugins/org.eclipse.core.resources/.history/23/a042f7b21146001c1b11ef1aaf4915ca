@@ -1,0 +1,10 @@
+package libro.Tema9.POO.Ejercicio_2;
+
+public class ProbarCoche {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

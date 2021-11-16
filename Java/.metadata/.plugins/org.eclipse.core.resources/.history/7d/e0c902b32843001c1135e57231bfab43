@@ -1,0 +1,14 @@
+package utils;
+
+public class Comprobar {
+	public static boolean entero(int n) {
+		boolean entero;
+		for (int i = 0; i < Integer.toString(n).toCharArray().length; i++) {
+			if (Integer.toString(n).toCharArray()[i] == '.' || Integer.toString(n).toCharArray()[i] == ','
+					|| Character.isLetter(Integer.toString(n).toCharArray()[i])) {
+				return entero = false;
+			}
+		}
+		return entero = true;
+	}
+}

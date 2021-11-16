@@ -1,0 +1,32 @@
+package pruebas;
+
+import java.util.Scanner;
+
+public class Numeros {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt(); //mediano/ el chiquito es short
+		long num2 = sc.nextLong(); //grande
+		double num3 = sc.nextDouble(); //chiquito
+		float num4 = sc.nextFloat(); //grande
+		String pal = sc.next();
+		float num5 = sc.nextFloat();
+		String palo = sc.next();
+		System.out.printf("%d %d %.1f %.1f %20s\n", num1, num2, num3, num4, pal);
+		pal += " " + sc.next();
+		//pal = pal.replace('D', 'J');
+		System.out.println(pal);
+		//pal += pal.charAt(0);
+		//System.out.println(pal);
+		pal = pal.replace('D', 'P');
+		pal = pal.replace('J', 'D');
+		System.out.println(pal);
+		pal = pal.replaceAll("Dhon", "Don");
+		pal = pal.replaceAll("Poe", "Pong");
+		System.out.println(pal);
+		sc.close();
+	}
+
+}
+//Integer.parseInt(sc.nextLine()) convierte lo leído a entero. Se puede convertir a todo menos a string.

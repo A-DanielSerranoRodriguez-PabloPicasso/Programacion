@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="indice"/>
+		<list key="findhistory">
+			<item value="indice"/>
+			<item value="dimension"/>
+			<item value="control"/>
+			<item value="caracter"/>
+			<item value="charFila"/>
+			<item value=" || mapa[filBomba][colBomba] != &quot;$&quot;"/>
+			<item value=" &amp;&amp; mapa[filBomba][colBomba] != &quot;$&quot;"/>
+			<item value="tesoro"/>
+		</list>
+		<list key="replacehistory">
+			<item value="dim"/>
+			<item value="control1"/>
+			<item value="perimetro"/>
+			<item value="simbolo"/>
+			<item value=" || mapa[filBomba][colBomba] != &quot;$&quot;"/>
+			<item value=" &amp;&amp; mapa[filBomba][colBomba] != &quot;$&quot;"/>
+			<item value="momento2"/>
+			<item value="dia2"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="-111"/>
+		<item key="DIALOG_Y_ORIGIN" value="351"/>
+		<item key="DIALOG_WIDTH" value="376"/>
+		<item key="DIALOG_HEIGHT" value="395"/>
+		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|10.0|0|GTK|1|"/>
+	</section>
+</section>

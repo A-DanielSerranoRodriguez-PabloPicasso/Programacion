@@ -1,0 +1,14 @@
+package libro.Tema9.POO.Ejercicio_2;
+
+public class ProbarCoche {
+
+	public static void main(String[] args) {
+		int opcion, km;
+		
+		Bicicleta bici = new Bicicleta(9);
+		Coche coche = new Coche(1900);
+		
+		
+	}
+
+}

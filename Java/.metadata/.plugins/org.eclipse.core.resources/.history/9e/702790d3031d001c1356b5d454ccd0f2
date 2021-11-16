@@ -1,0 +1,19 @@
+package pruebas;
+
+import java.util.Scanner;
+
+public class Numeros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		long num2 = sc.nextLong();
+		double num3 = sc.nextDouble();
+		float num4 = sc.nextFloat();
+		String[] pal = sc.next();
+		System.out.printf("%d %d %f %f", num1, num2, num3, num4);
+		sc.close();
+	}
+
+}

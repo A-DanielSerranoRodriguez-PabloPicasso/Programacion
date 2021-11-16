@@ -1,0 +1,47 @@
+package libro.Tema7.Matrices;
+
+public class Ejercicio_9 {
+
+	public static void main(String[] args) {
+		int[][] m = new int[12][12];
+		int[][] aux = new int[12][12];
+		int fil1=11,fil2=0,col1=11,col2=0;
+
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m.length; j++) {
+				m[i][j] = (int) (Math.random() * 101);
+			}
+		}
+
+		utils.Matrices.imprimeMatriz(m);
+
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m.length; j++) {
+				aux[i][j]=m[m.length-1-j][i];
+//				if (i == fil2)
+//					if (j != m.length-1) {
+//						aux[i][j + 1] = m[i][j];
+//					}
+//
+//				if (j == col1)
+//					if (i != col1) {
+//						aux[i + 1][j] = m[i][j];
+//					}
+//				if (i == fil1)
+//					if (j != col2) {
+//						aux[i][j - 1] = m[i][j];
+//					}
+//
+//				if (j == col2)
+//					if (i != fil2) {
+//						aux[i - 1][j] = m[i][j];
+//					}
+
+			}
+		}
+		System.out.println("\n");
+		utils.Matrices.imprimeMatriz(aux);
+
+	}
+
+}

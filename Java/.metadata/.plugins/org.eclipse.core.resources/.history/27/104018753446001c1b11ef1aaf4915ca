@@ -1,0 +1,60 @@
+package libro.Tema9.POO.Perro;
+
+import java.util.Scanner;
+
+public class Probar {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = 0;
+		double c;
+
+		Motocicleta miMoto = new Motocicleta("Negra", "Toshiba", "1234AAA", "LaMama", "Diesel", 150, 70);
+		while (n != 8) {
+			System.out.println("1. Arrancar");
+			System.out.println("2. Apagar");
+			System.out.println("3. Andar con el coche");
+			System.out.println("4. Quemar rueda con el coche");
+			System.out.println("5. Ver km bici");
+			System.out.println("6. Ver km coche");
+			System.out.println("7. Ver km total");
+			System.out.println("8. Salir");
+			System.out.print("Elegir (1-8): ");
+			n = Integer.parseInt(sc.next());
+
+			switch (n) {
+			case 1:
+				System.out.println("Mioto arranquiada");
+				miMoto.arrancar();
+				break;
+			case 2:
+				System.out.println("Mioto apiagiada");
+				miMoto.apagar();
+				break;
+			/*case 3:
+				System.out.print("¿Cuantos kilometros? ");
+				km = Integer.parseInt(sc.next());
+				coche.recorre(km);
+				break;
+			case 4:
+				coche.quemarRueda();
+				break;
+			case 5:
+				System.out.println(bici.getKilometrosRecorridos());
+				break;
+			case 6:
+				System.out.println(coche.getKilometrosRecorridos());
+				break;
+			case 7:
+				System.out.println(vehiculo.getKilometrosTotales());
+				break;*/
+			default:
+			}
+			System.out.println(miMoto.toString());
+			System.out.println();
+		}
+
+		sc.close();
+	}
+
+}

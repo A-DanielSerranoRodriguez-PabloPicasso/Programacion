@@ -1,0 +1,58 @@
+package libro.Tema8;
+
+import java.util.Scanner;
+
+public class A_Comprobaciones {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int[][] m = { { 2, 2, 3, 2 }, { 4, 5, 6, 2 }, { 7, 8, 2, 2 }, { 2, 2, 2, 2 } };
+		int[] n = new int[m.length];
+//		int[][] m = { { 1, 2 }, { 3, 4 } };
+//		System.out.println(utils.Comprobar.entero(sc.next()));
+//		Matrices.imprimeMatriz(m);
+//		System.out.println("\n");
+//		Matrices.imprimeMatriz(Matrices.inversaMatriz(m));
+//		Matrices.imprimeMatriz(Matrices.determinante(m));
+
+//		System.out.println(Matrices.determinanteMatriz(m));
+
+//		int[] array = E1_14_numeros.voltea(1293230) ;
+//		for (int i = 0; i < array.length; i++) {
+//			System.out.print(array[i]);
+//		}
+//		System.out.println(E1_14_numeros.posicionDigito(213,2));
+
+//		System.out.println(E1_14_numeros.voltea(12));
+
+//		System.out.println(E1_14_numeros.quitaPorDetras(213,1));
+
+//		System.out.println(E1_14_numeros.quitaPorDelante(213,1));
+
+//		System.out.println(E1_14_numeros.digitoN(213,0));
+
+//		System.out.println(E1_14_numeros.pegaPorDetras(213,1));
+//		
+//		System.out.println(E1_14_numeros.pegaPorDelante(213,1));
+
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[i].length; j++) {
+				
+					if (j != m[i].length - 1) {
+						n[j] = m[i][j + 1];
+
+					}
+					if (i!=j) {
+						n[j] = m[i][j];
+					}
+				
+			}
+		}
+		for (int i = 0; i < n.length; i++) {
+			System.out.print(n[i]);
+		}
+
+	}
+
+}

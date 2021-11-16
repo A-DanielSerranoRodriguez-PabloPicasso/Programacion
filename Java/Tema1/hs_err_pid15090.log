@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f7999c03393, pid=15090, tid=15099
+#
+# JRE version: OpenJDK Runtime Environment (16.0.2+7) (build 16.0.2+7-67)
+# Java VM: OpenJDK 64-Bit Server VM (16.0.2+7-67, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x4393]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x63
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/danielsr/Puente/PC/1ºCFGS - Desarrollo de Aplicaciones Multiplataforma/Proyectos/Java/Tema1/core.15090)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:36425 -javaagent:/home/danielsr/Puente/PC/Eclipse - Linux/configuration/org.eclipse.osgi/410/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 ejercicio_con_recompensa.Busqueda_del_tesoro
+
+Host: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, 8 cores, 7G, Ubuntu 21.10
+Time: Tue Oct 26 12:13:23 2021 CEST elapsed time: 151.568961 seconds (0d 0h 2m 31s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f7994024da0):  JavaThread "main" [_thread_in_vm, id=15099, stack(0x00007f7999c23000,0x00007f7999d23000)]
+
+Stack: [0x00007f7999c23000,0x00007f7999d23000],  sp=0x00007f7999d20170,  free space=1012k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x4393]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x63
+C  [libjimage.so+0x50de]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x3e
+C  [libjimage.so+0x55bc]  JIMAGE_FindResource+0xfc
+V  [libjvm.so+0x55e431]

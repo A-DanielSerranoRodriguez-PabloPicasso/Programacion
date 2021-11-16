@@ -1,0 +1,4 @@
+divison
+    larga con binario
+    logartimos
+    potencia -1 * modulo de la division

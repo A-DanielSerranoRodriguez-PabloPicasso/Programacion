@@ -1,0 +1,19 @@
+package libro.Tema1;
+
+public class Ejercicio_7 {
+
+	public static void main(String[] args) {
+		String[] punto = {"*",""};
+		int i;
+		for(i = 0; i < 5; i++) {
+			switch (i) {
+			case 0: {
+				System.out.println(punto[0]);
+			}
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + i);
+			}
+		}
+	}
+
+}
