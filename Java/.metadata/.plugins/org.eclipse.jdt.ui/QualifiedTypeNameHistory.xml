@@ -15,5 +15,8 @@
     <fullyQualifiedTypeName name="utils.Comprobar"/>
     <fullyQualifiedTypeName name="libro.Tema9.POO.Ejercicio_2.Vehiculo"/>
     <fullyQualifiedTypeName name="libro.Tema9.POO.Perro.Motocicleta"/>
+    <fullyQualifiedTypeName name="libro.Tema9.POO.ClasesEntregar.Perro"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="libro.Tema9.POO.ClasesEntregar.CuentaBancaria"/>
+    <fullyQualifiedTypeName name="libro.Tema9.POO.ClasesEntregar.Motocicleta"/>
 </qualifiedTypeNameHistroy>

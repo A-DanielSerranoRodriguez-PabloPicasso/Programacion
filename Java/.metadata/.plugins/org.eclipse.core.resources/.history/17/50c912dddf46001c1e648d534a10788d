@@ -1,0 +1,122 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+public class Motocicleta {
+	private boolean arrancada, adelante, atras;
+	private double cantidadGasolina, deposito, kilometrosTotales;
+	private String marca, modelo, color, matricula;
+	private int velocidad;
+
+	// Const
+	public Motocicleta(String marca, String modelo, String color, String matricula, double deposito) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+		this.matricula = matricula;
+		this.deposito = deposito;
+		this.cantidadGasolina = deposito * 0.70;
+		this.arrancada = false;
+		this.adelante = false;
+		this.atras = false;
+		this.velocidad = 0;
+		this.kilometrosTotales = 0;
+	}
+	// Getters - Setters
+
+	// Methods
+	public void arrancar() {
+		if (!this.arrancada)
+			this.arrancada = true;
+		else
+			System.out.println("Ya esta arrancada");
+	}
+
+	public void apagar() {
+		if (this.arrancada)
+			this.arrancada = false;
+		else
+			System.out.println("Ya esta apagada");
+	}
+
+	public void acelerar(int velocidad) {
+		if (!this.arrancada)
+			System.out.println("Necesitas arrancar la moto.");
+		else {
+			if (this.atras)
+				System.out.println("Tienes que pararte para poder acelerar");
+			else {
+				this.adelante = true;
+				this.atras = false;
+				this.velocidad += velocidad;
+			}
+		}
+
+	}
+
+	public void marchaAtras(int velocidad) {
+		if (!this.arrancada)
+			System.out.println("Necesitas arrancar la moto.");
+		else {
+			if (this.adelante)
+				System.out.println("Tienes que pararte para poder dar marcha atras");
+			else {
+				this.atras = true;
+				this.velocidad = velocidad;
+			}
+		}
+	}
+
+	public void frenar(int velocidad) {
+		if (!this.arrancada)
+			System.out.println("Necesitas arrancar la moto.");
+		else {
+			if (this.adelante || this.atras)
+				if (velocidad >= this.velocidad) {
+					this.velocidad = 0;
+					this.adelante = false;
+					this.atras = false;
+				} else
+					this.velocidad -= velocidad;
+			else
+				System.out.println("Ya estas quieto");
+		}
+	}
+
+	public void recorrer(int km) {
+		if (!this.arrancada)
+			System.out.println("Necesitas arrancar la moto.");
+		else {
+			if (this.velocidad == 0)
+				System.out.println("Tienes que tener velocidad para moverte");
+			else {
+				if (this.atras)
+					this.kilometrosTotales += km * 0.1;
+				else
+					this.kilometrosTotales += km;
+			}
+		}
+	}
+
+	public void repostar(double cantidad) {
+		if (this.arrancada)
+			System.out.println("Apaga la moto burro.");
+		else {
+			if (cantidad >= this.deposito)
+				this.cantidadGasolina = this.deposito;
+			else if (cantidad + this.cantidadGasolina >= this.deposito) {
+
+			}
+
+		}
+	}
+
+	// toString
+	@Override
+	public String toString() {
+		return "Motocicleta [arrancada=" + arrancada + ", adelante=" + adelante + ", atras=" + atras
+				+ ", cantidadGasolina=" + cantidadGasolina + ", deposito=" + deposito + ", kilometrosTotales="
+				+ kilometrosTotales + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", matricula="
+				+ matricula + ", velocidad=" + velocidad + "]";
+	}
+
+}

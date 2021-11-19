@@ -9,8 +9,8 @@
 		<item key="expressionHistoryEntry_4" value="20.0"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
-		<item key="WIDTH" value="608"/>
-		<item key="HEIGHT" value="194"/>
+		<item key="WIDTH" value="606"/>
+		<item key="HEIGHT" value="198"/>
 		<item key="SashWeightTree" value="500"/>
 		<item key="SashWeightDetails" value="500"/>
 	</section>

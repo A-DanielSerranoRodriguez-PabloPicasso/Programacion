@@ -1,0 +1,33 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+public class Perro {
+	private boolean tieneSueno, tieneHambre, esFeliz, necesitaSalir, fuera, andando, corriendo;
+	private int sueno, hambre, felicidad, salir;
+	private String nombre, raza, color;
+
+	// Const
+	public Perro(String nombre, String raza, String color) {
+		super();
+		this.nombre = nombre;
+		this.raza = raza;
+		this.color = color;
+		this.tieneSueno = false;
+		this.tieneHambre = false;
+		this.esFeliz = true;
+		this.necesitaSalir = false;
+		this.fuera = false;
+		this.andando = true;
+		this.corriendo = false;
+	}
+
+	// Getters - Setters
+	// Methods
+	// toString
+	@Override
+	public String toString() {
+		return "Perro [tieneSueno=" + tieneSueno + ", tieneHambre=" + tieneHambre + ", esFeliz=" + esFeliz
+				+ ", necesitaSalir=" + necesitaSalir + ", fuera=" + fuera + ", andando=" + andando + ", corriendo="
+				+ corriendo + ", sueno=" + sueno + ", hambre=" + hambre + ", felicidad=" + felicidad + ", salir="
+				+ salir + ", nombre=" + nombre + ", raza=" + raza + ", color=" + color + "]";
+	}
+}

@@ -1,9 +1,0 @@
-package libro.Tema9.POO.Perro;
-
-public class Perro {
-	private boolean dormido, sueno, hambriento, feliz, necesitaSalir, chip, moviendose, corriendo, andando, adelgazar;
-	private int codigoChip, edadAnos, edadMeses, velocidad, racion;
-	private double peso, altura, anchura, ingesta, perdido;
-	private String jueguete, raza, nombre;
-
-}

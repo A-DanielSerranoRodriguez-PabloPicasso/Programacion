@@ -1,0 +1,28 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+import java.util.Scanner;
+
+public class Probar {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Motocicleta moto = new Motocicleta("sunshine", "S", "Negra", "1234AAA", 120);
+
+		moto.arrancar();
+		moto.marchaAtras(20);
+
+		moto.acelerar(20);
+		System.out.println(moto);
+		System.out.println();
+
+		moto.apagar();
+
+//		double c = moto.repostar(-28);
+//		System.out.println(c);
+//		System.out.println(moto);
+
+		sc.close();
+	}
+
+}

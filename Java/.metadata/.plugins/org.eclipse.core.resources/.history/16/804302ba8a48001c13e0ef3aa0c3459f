@@ -1,0 +1,126 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+import java.util.Scanner;
+
+public class Probar_CuentaBancaria {
+	static Scanner sc = new Scanner(System.in);
+	static CuentaBancaria cb = new CuentaBancaria("12345678A", 1234);
+	static CuentaBancaria cb2 = new CuentaBancaria("98765432Z", 4321);
+	static int opt = 0, pin = 0;
+
+	public static void main(String[] args) {
+
+		do {
+			if (cb.isBloqueada()) {
+				System.out.println("CUENTA BLOQUEADA\n");
+				System.out.println("1. Desbloquear cuenta");
+				System.out.println("2. Salir");
+			} else if (!cb.isConectada()) {
+				System.out.println("1. Iniciar sesion");
+				System.out.println("2. Salir");
+			} else {
+				System.out.println("\nBIENVENIDO: " + cb.getDni());
+				System.out.println("1. Hacer ingreso");
+				System.out.println("2. Hacer retirada");
+				System.out.println("3. Hacer transferencia");
+				System.out.println("4. Ver estado cuenta");
+				System.out.println("5. Salir");
+			}
+			System.out.println();
+			System.out.print("¿Que quieres hacer? ");
+			opt = Integer.parseInt(sc.next());
+
+			accionMenu();
+
+		} while (opt != -1);
+
+	}
+
+	public static void accionMenu() {
+		if (cb.isBloqueada()) {
+			switch (opt) {
+			case 1:
+				System.out.print("\nIntroduce el pin: ");
+				pin = Integer.parseInt(sc.next());
+				cb.desbloquear(pin);
+				if (cb.isBloqueada()) {
+					System.out.println("\nERROR\n");
+				} else if (!cb.isBloqueada()) {
+					System.out.println("Cuenta desbloqueada\n");
+				}
+				break;
+
+			case 2:
+				opt = -1;
+				break;
+
+			default:
+				System.out.println("Elige una opcion correcta");
+				break;
+			}
+		} else if (!cb.isConectada()) {
+			switch (opt) {
+			case 1:
+				System.out.print("Introduce el pin: ");
+				pin = Integer.parseInt(sc.next());
+				cb.comprobarPin(pin);
+				if (!cb.isConectada()) {
+					System.out.println("\nPin incorrecto.\n");
+				}
+				break;
+
+			case 2:
+				opt = -1;
+				break;
+
+			default:
+				System.out.println("Elige una opcion correcta");
+				break;
+			}
+		} else
+			switch (opt) {
+			case 1:
+				System.out.print("¿Cuanto dinero quieres ingresar? ");
+				double ingreso = Double.parseDouble(sc.next());
+				try {
+					cb.retirada(ingreso);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				break;
+
+			case 2:
+				System.out.print("¿Cuanto dinero quieres retirar? ");
+				double retirada = Double.parseDouble(sc.next());
+				try {
+					cb.ingreso(retirada);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				break;
+
+			case 3:
+				System.out.print("¿Cuanto dinero quieres transferir? ");
+				double transferir = Double.parseDouble(sc.next());
+				try {
+					cb.transferencia(cb2, transferir);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				break;
+				
+			case 4:
+				System.out.println(cb);
+				break;
+
+			case 5:
+				opt = -1;
+				break;
+
+			default:
+				System.out.println("Elige una opcion correcta");
+				break;
+			}
+	}
+
+}

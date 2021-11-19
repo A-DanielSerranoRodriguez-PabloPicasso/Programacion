@@ -1,0 +1,98 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+public class Motocicleta {
+	private boolean arrancada, enMovimiento, marchaAtras;
+	private double cantidadGasolina, deposito, kilometrosTotales;
+	private String marca, modelo, color, matricula;
+	private int velocidad;
+
+	// Const
+	public Motocicleta(String marca, String modelo, String color, String matricula, double deposito) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+		this.matricula = matricula;
+		this.deposito = deposito;
+		this.cantidadGasolina = deposito * 0.70;
+		this.arrancada = false;
+		this.enMovimiento = false;
+		this.velocidad = 0;
+		this.marchaAtras = false;
+		this.kilometrosTotales = 0;
+	}
+	// Getters - Setters
+
+	// Methods
+	public void arrancar() {
+		if (!this.arrancada)
+			this.arrancada = true;
+		else
+			System.out.println("Ya esta arrancada");
+	}
+
+	public void apagar() {
+		if (this.arrancada)
+			this.arrancada = false;
+		else
+			System.out.println("Ya esta apagada");
+	}
+
+	public void acelerar(int velocidad) {
+		if (this.marchaAtras)
+			System.out.println("Tienes que pararte para poder acelerar");
+		else {
+			this.enMovimiento = true;
+			this.marchaAtras = false;
+			this.velocidad += velocidad;
+		}
+
+	}
+
+	public void frenar(int velocidad) {
+		if (this.enMovimiento)
+			if (velocidad >= this.velocidad) {
+				this.velocidad = 0;
+				this.enMovimiento = false;
+				this.marchaAtras = false;
+			} else
+				this.velocidad -= velocidad;
+		else {
+			System.out.println("Ya estas quieto");
+		}
+	}
+
+	public void marchaAtras(int velocidad) {
+		if (this.enMovimiento)
+			System.out.println("Tienes que pararte para poder dar marcha atras");
+		else {
+			this.marchaAtras = true;
+			this.velocidad = velocidad;
+		}
+	}
+
+	public void recorrer(int km) {
+		if (this.velocidad == 0)
+			System.out.println("Tienes que tener velocidad para moverte");
+		else {
+			if (this.marchaAtras)
+				this.kilometrosTotales += km * 0.1;
+			else
+				this.kilometrosTotales += km;
+		}
+	}
+
+	public void repostar(double cantidad) {
+
+	}
+	// toString
+
+	@Override
+	public String toString() {
+		return "Motocicleta [arrancada=" + arrancada + ", enMovimiento=" + enMovimiento + ", marchaAtras=" + marchaAtras
+				+ ", cantidadGasolina=" + cantidadGasolina + ", deposito=" + deposito + ", kilometrosTotales="
+				+ kilometrosTotales + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color + ", matricula="
+				+ matricula + ", velocidad=" + velocidad + "]";
+	}
+
+}

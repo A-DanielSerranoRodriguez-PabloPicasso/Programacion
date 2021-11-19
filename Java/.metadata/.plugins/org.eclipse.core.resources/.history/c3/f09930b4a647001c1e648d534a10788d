@@ -1,0 +1,54 @@
+package libro.Tema9.POO.ClasesEntregar;
+
+import java.util.Scanner;
+
+public class Probar {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Perro perro = new Perro("Coco", "aSaber", "Verde", 40);
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+		
+		
+		System.out.println(perro);
+		System.out.println();
+
+		sc.close();
+	}
+
+}
